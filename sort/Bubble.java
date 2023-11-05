@@ -1,9 +1,7 @@
-package sort;
-
 import java.util.Arrays;
 
 //time complexity = O(n^2)
-public class Bubble {
+class Bubble {
     public static void main(String[] args) {
         int arr[] = { 7,6,5,4,3,2 };
         bubble(arr);

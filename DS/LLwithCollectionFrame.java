@@ -1,5 +1,3 @@
-package DS;
-
 import java.util.LinkedList;
 
 public class LLwithCollectionFrame {

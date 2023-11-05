@@ -1,5 +1,3 @@
-package DS;
-
 public class LL {
 
     private Node head;
@@ -15,12 +13,15 @@ public class LL {
         String data;
         Node next;
 
+        // normal node
         Node(String data) {
             this.data = data;
             this.next = null;
             size++;
         }
-        Node(String data,Node next) {
+
+        // insert in linked list constructor..
+        Node(String data, Node next) {
             this.data = data;
             this.next = next;
             size++;
@@ -112,10 +113,9 @@ public class LL {
 
     }
 
-    public int Getsize(){
+    public int Getsize() {
         return size;
     }
-
 
     public void insert(String val, int index) {
         if (index == 0) {
@@ -132,7 +132,7 @@ public class LL {
             temp = temp.next;
         }
 
-        Node ll1=new Node(val,temp.next);
+        Node ll1 = new Node(val, temp.next);
         temp.next = ll1;
 
         size++;
@@ -146,7 +146,7 @@ public class LL {
         return node;
     }
 
-    //delete index of LL
+    // delete index of LL
 
     public void delete(int index) {
         if (index == 0) {
@@ -164,13 +164,35 @@ public class LL {
         size--;
         // return val;
     }
+
+    public void reverseList() {
+        if(head == null || head.next == null) {
+            return;
+        }
+ 
+ 
+        Node prevNode = head;
+        Node currNode = head.next;
+        while(currNode != null) {
+            Node nextNode = currNode.next;
+            currNode.next = prevNode;
+
+            //update
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        head.next = null;
+        head = prevNode;
+    }
+ 
+
     public static void main(String[] args) {
         LL list = new LL();
         list.addFirst("1");
         list.addFirst("2");
         list.addlast("3");
         list.addFirst("4");
-        // list.printList();
+        list.printList();
 
         list.addlast("5");
         // list.printList();
@@ -196,6 +218,8 @@ public class LL {
         list.delete(4);
         list.printList();
 
-      
+        list.reverseList();
+        list.printList();
+
     }
 }

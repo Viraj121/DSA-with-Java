@@ -1,3 +1,13 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "sort",
+        "practice",
+        "pattern",
+        "basic",
+        "String",
+        "Array",
+        "01-project",
+        "DS"
+    ]
 }

@@ -1,10 +1,8 @@
-package sort;
-
 import java.util.Arrays;
 
 class Insertion {
     public static void main(String[] args) {
-        int arr[] = { 6, 5, 4, 3, 2, 1 };
+        int arr[] = { 6, 0, 4, 3, 2, 1 };
         insertion(arr);
         System.out.println(Arrays.toString(arr));
 
@@ -19,6 +17,7 @@ class Insertion {
                     swap(arr, j, j - 1);
                 }else{
                     break;
+                    //break is used for optimizing the code as j at current position all the elements to its lest will be sorted one if at the first iteration of the j and j-1 fails it doesnt make any sense to check all the others element before it..eg 1,2,3,4|sorted part |9,6| at index 9
                 }
             }
 

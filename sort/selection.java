@@ -72,8 +72,8 @@ class Sorting {
 
             // finally joh do numbers select hua hai unko swap kar diya hai
             int temp = arr[smallest];
-            arr[smallest] = arr[i];
-            arr[i] = temp;
+            arr[smallest] = arr[i];//dusra value while looping through for loop 
+            arr[i] = temp;//smalled value ko put kiya at starting.
         }
 
         printArray(arr);
