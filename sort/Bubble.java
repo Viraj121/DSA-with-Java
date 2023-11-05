@@ -32,6 +32,7 @@ public class Bubble {
                     swapp = true;
                 }
             }
+            
             if (!swapp) { // !false=true
                 break;
             }
