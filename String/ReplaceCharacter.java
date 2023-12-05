@@ -1,22 +1,21 @@
-class ReplaceCharacter{
+class ReplaceCharacter {
     public static void main(String[] args) {
-        String str1="viraj";
+        String str1 = "viraj";
 
-        String str2=str1.replace("a", "");
-        System.out.println(str2);
+        // String str2 = str1.replace("a", "kok");
 
+        // System.out.println(str2);
 
-        //using for loop
+        StringBuilder str2 = new StringBuilder();
 
-        StringBuilder str3=new StringBuilder();
-        char charToRemove='a';
-
+        char charRemove = 'a';
         for (char ch : str1.toCharArray()) {
-            if(ch != charToRemove){
-                str3.append(ch);
+            if (ch != charRemove) {
+                str2.append(ch);
             }
         }
-        
-        System.out.println(str3.toString());
+
+        System.out.println(str2.toString());
     }
+
 }

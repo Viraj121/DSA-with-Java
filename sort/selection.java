@@ -1,5 +1,3 @@
-package sort;
-
 import java.util.Arrays;
 
 //kunal kushwaha solution
@@ -58,7 +56,7 @@ class Sorting {
 
         // selection sort
         for (int i = 0; i < arr.length - 1; i++) {
-            int smallest = i;
+            int smallest = i;//only position.
 
             // this loop will run to find the smallest element in the array and then it will
             // be swapped with assumped smallest element which was 1st element hint:(for
@@ -66,7 +64,7 @@ class Sorting {
 
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[smallest] > arr[j]) {
-                    smallest = j;
+                    smallest = j;//only position store kar rahe hai.
                 }
             }
 

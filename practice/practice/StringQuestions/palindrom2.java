@@ -1,4 +1,4 @@
-package practice;
+package practice.StringQuestions;
 
 import java.util.Scanner;
 
@@ -41,19 +41,20 @@ class palindrom3{
         String original,reverse="";
 
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter the number/word");
         original=sc.nextLine();
         sc.close();
+
+        
         int length=original.length();
 
-        for (int i = length-1; i>=0; i--) {
+        for (int i = length-1; i >=0; i--) {
             reverse=reverse+original.charAt(i);
         }
-        if(original.equals(reverse)){
-            System.out.println("it is palindrome");
 
+        if (original.equals(reverse)) {
+            System.out.println("palindrome");
         }else{
-            System.out.println("its not");
+            System.out.println("not palindrome");
         }
     }
 }

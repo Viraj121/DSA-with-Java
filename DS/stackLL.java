@@ -1,5 +1,3 @@
-package DS;
-
 class StackLL {
 
     static class Node {

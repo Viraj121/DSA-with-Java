@@ -1,12 +1,7 @@
 import java.util.*;
 
-public class stack {
+public class usingQstack {
     public static void main(String[] args) {
-        Stack<Integer> st = new Stack<>();
-        st.push(12);
-        st.push(11);
-
-        System.out.println(st.pop());
 
         Queue <Integer> queue=new LinkedList<>(); 
         queue.add(12);

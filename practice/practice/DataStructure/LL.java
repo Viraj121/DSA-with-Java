@@ -1,4 +1,4 @@
-package practice;
+package practice.DataStructure;
 
 public class LL {
 

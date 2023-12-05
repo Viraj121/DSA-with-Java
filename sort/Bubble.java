@@ -31,6 +31,8 @@ class Bubble {
                 }
             }
             
+
+            //if array is already sorted then for i=0 it will iterate through all j comparison and again for i=2 it will do the same thing making comparison less till i=0 swap is used...
             if (!swapp) { // !false=true
                 break;
             }
