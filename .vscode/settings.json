@@ -6,8 +6,9 @@
         "pattern",
         "basic",
         "String",
+        "DS",
         "Array",
         "01-project",
-        "DS"
+        "recursion"
     ]
 }

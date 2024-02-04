@@ -7,7 +7,7 @@ public class SpecialChar {
         String str2 = str.replaceAll("[^a-zA-Z0-9]", "");
         System.out.println(str2);
 
-        String str4 = str3.replace(" ", "");
+        String str4 = str3.replace("l", "");
         System.out.println(str4);
     }
 }

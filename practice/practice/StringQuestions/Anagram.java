@@ -1,37 +1,30 @@
 package practice.StringQuestions;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
-public class Anagram {
+class Anagram{
     public static void main(String[] args) {
-        System.out.println("enter two strings");
-        Scanner sc = new Scanner(System.in);
-        String str1 = sc.next();
-        String str2 = sc.next();
-        sc.close();
+        String str1="Viraj";
+        String str2="viraj";
 
-        boolean status = findstatus(str1, str2);
-
-        if (status) {
-            System.out.println("anagram");
-        } else {
-            System.out.println("not");
+        if (isAnagram(str1,str2)) {
+            System.out.println("it is anagram");
+        }else{
+            System.out.println("its is not");
         }
     }
 
-    public static boolean findstatus(String str, String str2) {
-        boolean status;
+    static boolean isAnagram(String str1,String str2){
+        boolean status=true;
 
-        if (str.length() != str2.length()) {
-            status= false;
-        } else {
-            char ch[] = str.toLowerCase().toCharArray();
-            char ch1[] = str2.toLowerCase().toCharArray();
+        if (str1.length()!=str2.length()) {
+            status=false;
+        }else{
+            char sh[]=str1.toLowerCase().toCharArray();
+            char ch[]=str2.toLowerCase().toCharArray();
+            Arrays.sort(sh);
             Arrays.sort(ch);
-            Arrays.sort(ch1);
-
-            status=Arrays.equals(ch, ch1);
+            status = Arrays.equals(ch, sh);
         }
         return status;
     }

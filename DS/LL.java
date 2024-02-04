@@ -1,7 +1,7 @@
 public class LL {
 
     private Node head;
-    // private Node tail;
+    private Node tail;
 
     private int size;
 
@@ -30,13 +30,20 @@ public class LL {
 
     // add - first
     public void addFirst(String data) {
+
+        //create a new node
         Node newNode = new Node(data);
+
+        //check if list is empty
         if (head == null) {
-            head = newNode;
+            head = tail = newNode;
             return;
         }
 
+        //new node ka next to head 
         newNode.next = head;
+
+        //head point to new node 
         head = newNode;
 
     }

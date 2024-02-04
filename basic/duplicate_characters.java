@@ -23,42 +23,44 @@ public class duplicate_characters {
 
 // Remove duplicate element using indexOf method of string class
 
-class duplicate_characters {
-    public static void main(String[] args) {
-        String str = "VirajisViraj";
+// class duplicate_characters {
+//     public static void main(String[] args) {
+//         String str = "VirajisViraj";
 
-        StringBuilder sb = new StringBuilder();
+//         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            int indx = str.indexOf(ch, i + 1);
-            if (indx == -1) {
-                sb.append(ch);
-            }
-        }
-        System.out.println(sb);
-
-
-        //new approach
-        char[] arr=str.toCharArray();
-        StringBuilder sb1=new StringBuilder();
-        for (int i = 0; i < arr.length; i++) {
-            boolean repeated=false;
-            for (int j = i+1; j < arr.length; j++) {
-                if(arr[i]==arr[j]){
-                    repeated=true;
-                    break;
-                }
-            }
-            if(!repeated){
-                sb1.append(arr[i]);
-            }
-        }
-        System.out.println(sb1);
+//         for (int i = 0; i < str.length(); i++) {
+//             char ch = str.charAt(i);
+//             int indx = str.indexOf(ch, i + 1);
+//             if (indx == -1) {
+//                 sb.append(ch);
+//             }
+//         }
+//         System.out.println(sb);
 
 
-    }
-}
+//         //new approach
+//         char[] arr=str.toCharArray();
+//         StringBuilder sb1=new StringBuilder();
+//         for (int i = 0; i < arr.length; i++) {
+//             boolean repeated=false;
+//             for (int j = i+1; j < arr.length; j++) {
+//                 if(arr[i]==arr[j]){
+//                     repeated=true;
+//                     break;
+//                 }
+//             }
+//             if(!repeated){
+//                 sb1.append(arr[i]);
+//             }
+//         }
+//         System.out.println(sb1);
+
+
+//     }
+// }
+
+
 
 // import java.util.HashMap;
 // import java.util.Map;
