@@ -5,7 +5,7 @@ public class LL {
 
     private int size;
 
-    LL() {
+    LL() { 
         this.size = 0;
     }
 
@@ -52,16 +52,12 @@ public class LL {
     public void addlast(String data) {
         Node newNode = new Node(data);
         if (head == null) {
-            head = newNode;
+            head = tail = newNode;
             return;
         }
 
-        Node currNode = head;
-        while (currNode.next != null) {
-            currNode = currNode.next;
-        }
-
-        currNode.next = newNode;
+        tail.next = newNode;
+        tail=newNode;
     }
 
     // print
@@ -135,7 +131,7 @@ public class LL {
         }
 
         Node temp = head;
-        for (int i = 1; i < index; i++) {
+        for (int i = 0; i < index-1; i++) {
             temp = temp.next;
         }
 
@@ -202,7 +198,7 @@ public class LL {
         list.printList();
 
         list.addlast("5");
-        // list.printList();
+        list.printList();
 
         list.addFirst("6");
         // list.printList();
